@@ -161,18 +161,7 @@ p { margin: 0 0 1em; }
 .give { background: linear-gradient(160deg, var(--ink) 0%, var(--ink-deep) 100%); color: #fff; }
 .give-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
 .give-text p:not(.eyebrow) { opacity: .85; font-size: 1.08rem; }
-.bank-card { background: var(--white); color: var(--ink); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 30px 70px -30px rgba(0,0,0,.6); }
-.bank-head { background: var(--accent); padding: 22px 28px; color: var(--ink-deep); }
-.bank-head span { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .75; }
-.bank-head strong { font-family: var(--font-display); font-size: 1.4rem; }
-.bank-card dl { margin: 0; padding: 10px 28px 20px; }
-.bank-card dl > div { padding: 16px 0; border-bottom: 1px solid var(--line); }
-.bank-card dl > div:last-child { border-bottom: 0; }
-.bank-card dt { font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
-.bank-card dd { margin: 4px 0 0; font-weight: 600; font-size: 1.08rem; }
-.bank-card dd a { text-decoration: none; }
 .copy-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.acct { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.3rem; letter-spacing: .06em; }
 .copy-btn { border: 1.5px solid var(--line); background: var(--tint); color: var(--ink); font: 600 .85rem var(--font-body); padding: 8px 16px; border-radius: 999px; cursor: pointer; transition: background .2s, border-color .2s; flex-shrink: 0; }
 .copy-btn:hover { border-color: var(--accent); }
 .copy-btn.done { background: var(--accent); border-color: var(--accent); }
@@ -235,8 +224,6 @@ p { margin: 0 0 1em; }
   .glance-grid { grid-template-columns: 1fr 1fr; }
   .glance a { padding: 18px 16px; }
   .hero-actions .btn, .contact-actions .btn { flex: 1 1 100%; }
-  .acct { font-size: 1.1rem; }
-  .bank-card dl, .bank-head { padding-left: 20px; padding-right: 20px; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
