@@ -40,32 +40,6 @@ $$(".reveal").forEach((el, i) => {
   io.observe(el);
 });
 
-// Toast
-const toastEl = $(".toast");
-let toastTimer;
-const toast = (msg) => {
-  toastEl.textContent = msg;
-  toastEl.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toastEl.classList.remove("show"), 3000);
-};
-
-// Copy buttons (account number, phone)
-$$(".copy-btn").forEach((btn) => {
-  btn.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(btn.dataset.copy);
-    } catch {
-      const t = Object.assign(document.createElement("textarea"), { value: btn.dataset.copy });
-      document.body.append(t); t.select(); document.execCommand("copy"); t.remove();
-    }
-    btn.textContent = "Copied ✓";
-    btn.classList.add("done");
-    toast(`Copied ${btn.dataset.copy}`);
-    setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 2000);
-  });
-});
-
 // Lightbox for project and gallery photos
 const lb = document.createElement("div");
 lb.className = "lightbox";
