@@ -1,4 +1,4 @@
-# Hebron Church Generosity Department — website
+# Hebron Charity — website
 
 A fast, responsive, single-page static site. No build step, no dependencies:
 `index.html`, `styles.css`, `script.js` and the `images/` folder.

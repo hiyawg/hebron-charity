@@ -1,5 +1,5 @@
 /* =========================================================
-   Hebron Church Generosity Department — site behavior
+   Hebron Charity — site behavior
    ========================================================= */
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
