@@ -40,6 +40,21 @@ $$(".reveal").forEach((el, i) => {
   io.observe(el);
 });
 
+// Gallery filter by project
+const filterBtns = $$(".gallery-filters button");
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const f = btn.dataset.filter;
+    filterBtns.forEach((b) => {
+      b.classList.toggle("active", b === btn);
+      b.setAttribute("aria-pressed", b === btn);
+    });
+    $$(".gallery figure").forEach((fig) => {
+      fig.classList.toggle("hidden", f !== "all" && fig.dataset.project !== f);
+    });
+  });
+});
+
 // Lightbox for project and gallery photos
 const lb = document.createElement("div");
 lb.className = "lightbox";
