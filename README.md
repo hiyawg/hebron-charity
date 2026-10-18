@@ -1,40 +1,44 @@
 # Hebron Charity — website
 
-A fast, responsive, single-page static site. No build step, no dependencies:
-`index.html`, `styles.css`, `script.js` and the `images/` folder.
+Static site, no build step and no dependencies. Hosted on Vercel from the `main`
+branch of `hiyawg/hebron-charity` at https://www.hebcharty.com.
 
-Content comes from *"HEBRON CHURCH GENEROSITY DEPARTMENT to Pas Bedlu.docx"*:
-the five projects, their Bible verses and activities, the contact number and the
-bank account details. The photos are the ones from that document.
+## Pages
 
-## Before you go live
+| URL | File |
+|---|---|
+| `/` | `index.html` |
+| `/about`, `/impact`, `/accountability`, `/partner`, `/donate`, `/gallery`, `/privacy` | `<name>.html` |
+| `/projects/<slug>` | `projects/<slug>.html` (five project pages) |
+| not found | `404.html` |
 
-1. **Check the text.** Read every project once. One line was shortened:
-   "Serving free breakfast by their own" now reads "Serving free breakfast".
-2. **Use sharper photos if you have them.** The photos in the Word file are small
-   (about 400 px wide), so they look slightly soft on large screens. Replace a file in
-   `images/` with a larger original using the **same file name**, and it updates everywhere.
-3. **Social sharing preview.** After deploying, change `og:image` in `index.html` to the
-   full URL, e.g. `https://your-site.netlify.app/images/p2-meal.jpg`.
-4. **Colours and fonts** are the variables at the top of `styles.css`.
+`vercel.json` turns on clean URLs (`/about` serves `about.html`). Shared styles are in
+`styles.css` (colours and fonts are the variables at the top) and behaviour is in
+`script.js`. The header and footer are repeated in every page: change all of them together.
+
+## Placeholders
+
+Information the organisation still has to supply is marked in the pages as
+`<div class="todo">…</div>` (shown as a dashed "To be provided" box) or
+`<span class="tbc">To confirm</span>`. Search for `class="todo"` and `class="tbc"` to find them.
+Do not replace them with invented figures, names or registration details.
+
+## Inquiry form
+
+`/partner` has no backend. It validates the form and builds a WhatsApp message to
++251 924 401 884 that the visitor sends themselves; nothing is stored by the site.
+
+## Photos
+
+Put photos in `images/`. Do not publish photos in which girls receiving feminine
+hygiene products can be identified.
 
 ## Preview locally
 
-```bash
-python3 -m http.server 8080
-```
-Then open http://localhost:8080
+Clean URLs need a server that maps `/about` to `about.html`; with plain
+`python3 -m http.server 8080`, open the `.html` files directly
+(e.g. http://localhost:8080/about.html).
 
-## Deploy (pick one, all free)
+## Search engines
 
-**Netlify (easiest):** go to https://app.netlify.com/drop and drag this whole folder in.
-You get a live HTTPS link instantly; add your own domain under *Domain settings*.
-
-**Vercel:**
-```bash
-npx vercel --prod
-```
-
-**GitHub Pages:** push this folder to a repo → *Settings → Pages* → deploy from `main`, root folder.
-
-**Cloudflare Pages:** *Workers & Pages → Create → Pages → Upload assets*, then upload the folder.
+`sitemap.xml` and `robots.txt` are in the root. Add new pages to `sitemap.xml`.
