@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/donate", "destination": "/partner", "permanent": true },
+    { "source": "/support", "destination": "/partner", "permanent": false }
+  ]
+}
