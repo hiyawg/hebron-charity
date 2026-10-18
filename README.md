@@ -8,7 +8,7 @@ branch of `hiyawg/hebron-charity` at https://www.hebcharty.com.
 | URL | File |
 |---|---|
 | `/` | `index.html` |
-| `/about`, `/impact`, `/accountability`, `/partner`, `/donate`, `/gallery`, `/privacy` | `<name>.html` |
+| `/about`, `/impact`, `/accountability`, `/partner`, `/gallery`, `/privacy` | `<name>.html` |
 | `/projects/<slug>` | `projects/<slug>.html` (five project pages) |
 | not found | `404.html` |
 
