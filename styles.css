@@ -173,6 +173,18 @@ p { margin: 0 0 1em; }
 .contact-inner p { color: rgba(255, 255, 255, .85); margin: 0; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
+/* ---------- Where your support goes ---------- */
+.callout { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: center; margin-top: 56px; padding: clamp(28px, 4vw, 48px); background: var(--tint); border-radius: var(--radius-lg); border-left: 6px solid var(--accent); }
+.callout h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
+.callout-head p:last-child { margin: 0; color: var(--ink-soft); }
+.callout-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.callout-points li { background: var(--white); border-radius: var(--radius); padding: 16px 20px; }
+.callout-points b { display: block; font-family: var(--font-display); font-size: 1.35rem; text-transform: uppercase; }
+.callout-points span { color: var(--ink-soft); font-size: .95rem; }
+.section-flush { padding-top: 0; }
+.section-flush .callout { margin-top: 0; }
+@media (max-width: 860px) { .callout { grid-template-columns: 1fr; } }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink-deep); color: rgba(248,245,238,.78); padding: 70px 0 30px; font-size: .95rem; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
