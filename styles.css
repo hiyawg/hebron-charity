@@ -34,6 +34,7 @@ body {
   background: var(--cream);
   -webkit-font-smoothing: antialiased;
 }
+[hidden] { display: none !important; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }

@@ -23,6 +23,9 @@ Information the organisation still has to supply is marked in the pages as
 `<span class="tbc">To confirm</span>`. Search for `class="todo"` and `class="tbc"` to find them.
 Do not replace them with invented figures, names or registration details.
 
+On `about.html` the placeholders are temporarily hidden with the `hidden` attribute
+(on the box, fact row, span or heading). Remove `hidden` when the information arrives.
+
 ## Inquiry form
 
 `/partner` has no backend. It validates the form and builds a WhatsApp message to
