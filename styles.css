@@ -155,6 +155,7 @@ p { margin: 0 0 1em; }
 .period { font-weight: 600; margin: 0 0 12px; }
 .area-intro { margin: 72px 0 24px; }
 .area-intro p.draft-label { font-size: .78rem; color: var(--accent-dark); }
+.area-map { margin-bottom: 40px; }
 .area-map .method-table { min-width: 640px; }
 .area-map .method-table td:nth-child(2) { font-family: var(--font-body); font-weight: 400; }
 .area-map + .todo { margin: 16px 0 48px; }
