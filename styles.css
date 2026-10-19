@@ -383,7 +383,7 @@ p { margin: 0 0 1em; }
   .program-card, .program-card:nth-child(n+4) { grid-column: auto; }
   .program-card:nth-child(n+4) .program-media img { aspect-ratio: 4/3; }
   .program-card:last-child { grid-column: 1 / -1; }
-  .article-grid, .form-grid, .two-col, .intro-grid { grid-template-columns: 1fr; }
+  .article-grid, .form-grid, .two-col, .intro-grid { grid-template-columns: minmax(0, 1fr); }
   .article-aside { position: static; }
 }
 @media (max-width: 860px) {
